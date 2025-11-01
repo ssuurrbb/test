@@ -6,7 +6,7 @@ import { join } from 'path';
 
 @Controller('files')
 export class FilesController {
-  constructor(private filesService: FilesService) {}
+  constructor(private filesService: FilesService) { }
 
   @Post('upload')
   @UseInterceptors(FileInterceptor('file', {

@@ -5,7 +5,7 @@ import { FileEntity } from './file.entity';
 
 @Injectable()
 export class FilesService {
-  constructor(@InjectRepository(FileEntity) private repo: Repository<FileEntity>) {}
+  constructor(@InjectRepository(FileEntity) private repo: Repository<FileEntity>) { }
 
   create(filename: string, path: string) {
     const file = this.repo.create({ filename, path });
